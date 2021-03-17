@@ -1,5 +1,5 @@
-const Counter = artifacts.require("Counter");
+const Precompiles = artifacts.require("Precompiles");
 
 module.exports = function (deployer) {
-  deployer.deploy(Counter);
+  deployer.deploy(Precompiles);
 };
