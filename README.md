@@ -17,3 +17,15 @@ To deploy the contract to local bsc node:
 
 `truffle migrate --network testnet`
 
+## Start the nodes
+
+### Start bootstrap node
+
+`./build/bin/geth --datadir node1 --networkid 1000 console`
+
+### Start second node
+
+`./build/bin/geth --datadir node2 --port 30304 --nodiscover --networkid 1000 console --rpc --rpcport 8545 --ws --wsport 8546 --rpcaddr 127.0.0.1 --rpccorsdomain "*" --rpcapi "eth,net,web3,personal,miner"
+`
+
+Read this [page](https://docs.binance.org/smart-chain/developer/deploy/local.html) for more instructions on creating accounts and starting miners
